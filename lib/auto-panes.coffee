@@ -42,11 +42,13 @@ module.exports = AtomAutoPanes =
       atom.workspace.getPanes().forEach (pane)->
         if pane isnt activePane
           pane.getItems().forEach (item)->
-            item.save()
+            if item.save and item.isModified and item.isModified()
+              item.save()
           pane.destroy()
       obs = activePane.onDidChangeActiveItem ()->
         activePane.getItems().forEach (item)->
-          item.save() if item isnt activePane.getActiveItem()
+          if item.save and item.isModified and item.isModified() and item isnt activePane.getActiveItem()
+            item.save()
         activePane.destroyInactiveItems()
         obs.dispose()
 
@@ -98,10 +100,12 @@ module.exports = AtomAutoPanes =
           pane.getItems().forEach (item)->
             if pane isnt activePane
               pane.getItems().forEach (item)->
-                item.save()
+                if item.save and item.isModified and item.isModified()
+                  item.save()
               pane.destroy()
         activePane.getItems().forEach (item)->
-          item.save() if item isnt activePane.getActiveItem()
+          if item.save and item.isModified and item.isModified() and item isnt activePane.getActiveItem()
+            item.save() 
         activePane.destroyInactiveItems()
 
       @editorObserver = atom.workspace.observeTextEditors(@onNewEditor)
