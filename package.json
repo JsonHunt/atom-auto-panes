@@ -1,7 +1,7 @@
 {
   "name": "auto-panes",
   "main": "./lib/auto-panes",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Automatically open corresponding files in separate panes. Automatically save and close files unrelated to task at hand.",
   "activationCommands": {
     "atom-workspace": "auto-panes:toggle"
@@ -11,6 +11,5 @@
   "engines": {
     "atom": ">=0.174.0 <2.0.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
