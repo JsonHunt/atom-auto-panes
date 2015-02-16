@@ -6,7 +6,7 @@
   "activationCommands": {
     "atom-workspace": "auto-panes:toggle"
   },
-  "repository": "https://github.com/atom/auto-panes",
+  "repository": "https://github.com/JsonHunt/atom-auto-panes.git",
   "license": "MIT",
   "engines": {
     "atom": ">=0.174.0 <2.0.0"

@@ -1,3 +1,9 @@
 .DS_Store
 npm-debug.log
 node_modules
+
+test.styl
+test.jade
+test.coffee
+spec/auto-panes-view-spec.coffee
+spec/auto-panes-spec.coffee
