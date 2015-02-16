@@ -1,0 +1,22 @@
+# See https://atom.io/docs/latest/creating-a-package#menus for more details
+'context-menu':
+  'atom-text-editor': [
+    {
+      'label': 'Toggle auto-panes'
+      'command': 'auto-panes:toggle'
+    }
+  ]
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'auto-panes'
+      'submenu': [
+        {
+          'label': 'Toggle'
+          'command': 'auto-panes:toggle'
+        }
+      ]
+    ]
+  }
+]
