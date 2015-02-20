@@ -1,3 +1,6 @@
+## 1.2.1
+* fixed package paths
+
 ## 1.2.0
 * save only when modified
 * fixed bug when one of the open items is not a text editor
